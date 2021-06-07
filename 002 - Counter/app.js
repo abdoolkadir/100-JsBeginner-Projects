@@ -11,5 +11,4 @@ btnAdd.forEach((btn) => {
         }
         count.textContent = counter;
     })
-
 })
