@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    h1 {
+        margin: 20px;
+        font-size: 3.5rem;
+    }
+    .btn {
+        padding: 10px;
+        width: 100px;
+        margin-right: 10px;
+        color: white;
+    }
+    .btn-add {
+        background: green;
+    }
+    .btn-minus {
+        background: red;
+    }
+    .btn-add:active {
+        position: relative;
+        top: -10px;
+    }
+    .btn-minus:active {
+        position: relative;
+        top: 10px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div>
+            <h1 class="count">0</h1>
+        </div>
+        <div>
+            <button class="btn btn-add">➕</button>
+            <button class="btn btn-minus">➖</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
