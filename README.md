@@ -3,3 +3,4 @@
 
 # List of Projects
 1. Background Color Changer
+2. Counter
