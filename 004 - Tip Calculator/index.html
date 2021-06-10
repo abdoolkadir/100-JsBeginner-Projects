@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .alert {
+        padding: 10px;
+    }
+    .alert-danger {
+        background: #F8D7DA;
+        color: #881C24;
+    }
+    .alert p {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background: #F7F7F7;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        max-width: 550px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .calculator {
+        background: #fff;
+        width: 100%;
+        margin-top: 20px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    }
+    header {
+        text-align: center;
+        background: #2f5479;
+        padding: 20px;
+        color: #fff;
+    }
+    form {
+        padding: 10px;
+    }
+    .form-group {
+        margin-top: 10px;
+    }
+    label {
+        font-weight: bold;
+    }
+    .input-group {
+        margin-top: 5px;
+        display: flex;
+    }
+    .input-sign{
+        font-weight: bold;
+        color: #fff;
+        background: #2f5479;
+        padding: 10px;
+    }
+    input {
+        width: 100%;
+        padding: 10px;
+    }
+    .btn {
+        display: block;
+        width: 80%;
+        padding: 10px;
+        margin: 10px auto;
+        border: none;
+        color: white;
+        background: #2f5479;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <header>
+                <h1>Tip Calculator</h1>
+            </header>
+            <!-- <div class="alert"></div> -->
+            <form>
+                <div class="form-group">
+                    <label for="bill">How much was your bill?</label>
+                    <div class="input-group">
+                        <span class="input-sign">$</span>
+                        <input type="number" id="bill" placeholder="Bill...">
+                    </div>
+                </div><div class="form-group">
+                    <label for="people">How many People are sharing the bill?</label>
+                    <div class="input-group">
+                        <span class="input-sign">$</span>
+                        <input type="number" id="people" placeholder="People...">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="bill">Select Tip percentage</label>
+                </div>
+                <input type="submit" value="Calculate" class="btn"/>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
