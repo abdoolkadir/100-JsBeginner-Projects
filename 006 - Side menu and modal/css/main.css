@@ -1,0 +1,233 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --btn-color: #2d9378;
+}
+
+body {
+  font-family: 'poppins';
+  font-size: 18px;
+}
+
+header {
+  position: fixed;
+  z-index: 999;
+  background: #202124;
+  width: 100%;
+}
+
+header .container {
+  padding: .8em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: space-between;
+}
+
+header .container .logo h1 {
+  font-size: 24px;
+  color: #fff;
+}
+
+header .container .logo h1 span {
+  color: var(--btn-color);
+}
+
+header nav {
+  background: #262626;
+  position: absolute;
+  right: 0;
+  top: 63px;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  padding: 2em;
+  display: none;
+}
+
+header nav img {
+  margin: 0;
+}
+
+header nav ul {
+  list-style: none;
+}
+
+header nav ul li {
+  margin: 2em 0;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+header nav button {
+  padding: 1em 2em;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  background: var(--btn-color);
+  color: #fff;
+}
+
+.main-section {
+  position: relative;
+  top: 63.78px;
+}
+
+.main-section .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 1em;
+  padding: 1em;
+}
+
+.main-section .container aside {
+  display: none;
+}
+
+.main-section .container main {
+  padding: 1em;
+  background: #f3f1f1;
+}
+
+.main-section .container main p {
+  margin-bottom: 1em;
+  word-wrap: break-word;
+}
+
+.main-section .modal {
+  position: fixed;
+  width: 100%;
+  top: 63.78px;
+  background: rgba(0, 0, 0, 0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: calc(100vh - 63.78px);
+  display: none;
+  z-index: 1000;
+}
+
+.main-section .modal .modal-body {
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 5em auto;
+}
+
+.main-section .modal .modal-body img {
+  margin-bottom: 1em;
+  width: 10%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.main-section .modal .modal-body input {
+  font-size: 18px;
+  width: 100%;
+  padding: .5em;
+  margin-bottom: .5em;
+  border-radius: 5px;
+  border: none;
+}
+
+.main-section .modal .modal-body button {
+  padding: .8em 2em;
+  border-radius: 5px;
+  border: none;
+  background: var(--btn-color);
+  font-weight: bold;
+  color: #fff;
+  font-size: 18px;
+  margin-top: .5em;
+}
+
+label {
+  display: block;
+  color: #fff;
+  margin-bottom: .2em;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  header .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+  }
+  header .container nav {
+    display: block;
+    position: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    background: none;
+    height: auto;
+    width: 100%;
+    padding: 0;
+  }
+  header .container nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: auto;
+    margin: 0;
+  }
+  header .container nav ul li {
+    margin: .3em 1em 0 0;
+  }
+  header img {
+    display: none;
+  }
+  .main-section .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+  }
+  .main-section .container aside {
+    display: block;
+    background: #f3f1f1;
+    padding: 1em;
+    height: 400px;
+  }
+  .main-section .container aside label {
+    color: #000;
+  }
+  .main-section .container aside input {
+    font-size: 18px;
+    width: 80%;
+    padding: .5em;
+    margin-bottom: .5em;
+    border-radius: 5px;
+    border: none;
+  }
+}
+/*# sourceMappingURL=main.css.map */

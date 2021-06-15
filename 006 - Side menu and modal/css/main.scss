@@ -1,0 +1,224 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --btn-color: #2d9378;
+}
+body {
+    font-family: 'poppins';
+    font-size: 18px;
+}
+
+header {
+    position: fixed;
+    z-index: 999;
+    background: #202124;
+    width: 100%;
+
+    .container {
+        padding: .8em;
+        display: flex;
+        place-content: space-between;
+        
+        
+        .logo h1 {
+            font-size: 24px;
+            color: #fff;
+            
+
+            span {
+                color: var(--btn-color);
+            }
+        }
+    }
+
+    nav {
+        background: #262626;
+        position: absolute;
+        right: 0;
+        top: 63px;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        padding: 2em;
+        display: none;
+
+        img {
+            margin: 0;
+        }
+
+        ul {
+            list-style: none;
+
+            li {
+                margin: 2em 0;
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
+        }
+
+        button {
+            padding: 1em 2em;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            background: var(--btn-color);
+            color: #fff;
+
+        }
+    }
+}
+
+.main-section {
+    position: relative;
+    top: 63.78px;
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1em;
+        padding: 1em;
+        // position: relative;
+
+        aside {
+            display: none;
+        }
+
+        main {
+            padding: 1em;
+            background: #f3f1f1;
+
+            p {
+                margin-bottom: 1em;
+                word-wrap: break-word;
+            }
+        }
+    }
+
+    .modal {
+        position: fixed;
+        width: 100%;
+        top: 63.78px;
+        background: rgba(0, 0, 0, 0.9);
+        display: flex;
+        justify-content: center;
+        height: calc(100vh - 63.78px);
+
+        display: none;
+        z-index: 1000;
+
+        .modal-body {
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            margin: 5em auto;
+
+            img {
+                margin-bottom: 1em;
+                width: 10%;
+                align-self: flex-end;
+            }
+
+            input {
+                font-size: 18px;
+                width: 100%;
+                padding: .5em;
+                margin-bottom: .5em;
+                border-radius: 5px;
+                border: none;
+            }
+
+            button {
+                padding: .8em 2em;
+                border-radius: 5px;
+                border: none;
+                background: var(--btn-color);
+                font-weight: bold;
+                color: #fff;
+                font-size: 18px;
+                margin-top: .5em;
+            }
+        }
+    }
+}
+
+label {
+    display: block;
+    color: #fff;
+    margin-bottom: .2em;
+}
+
+@media only screen and(min-width: 768px) {
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    header {
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+
+            
+        nav {
+            display: block;
+            position: unset;
+            display: flex;
+            justify-content: flex-end;
+            background: none;
+            height: auto;
+            width: 100%;
+            padding: 0;
+
+            ul {
+                display: flex;
+                justify-content: space-between;
+                // width: 50%;
+                height: auto;
+                margin: 0;
+
+                li {
+                    margin: .3em 1em 0 0;
+                }
+            }
+        }
+        }
+
+        img{
+            display: none;
+        }
+
+    }
+    
+    .main-section {
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+
+            aside {
+                display: block;
+                background: #f3f1f1;
+                padding: 1em;
+                height: 400px;
+        
+                label {   
+                    color: #000;
+                }
+        
+                input {
+                    font-size: 18px;
+                    width: 80%;
+                    padding: .5em;
+                    margin-bottom: .5em;
+                    border-radius: 5px;
+                    border: none;
+                }
+            }
+        }
+    }
+}

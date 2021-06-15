@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorem Ipsum</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Lorem <span>Ipsum</span></h1>
+            </div>
+
+            <img id="mobile-cta" class="mobile-menu" src="images/menu.svg" alt="Open Navigation">
+
+            <nav class="toggle">
+                <img id="mobile-exit" class="mobile-exit" src="images/exit.svg" alt="Exit Navigation">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About <span>v</span></a></li>
+                </ul>
+
+                <button class="log-in-btn">Log In</button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="main-section">
+        <div class="container">
+            <aside>
+                <div class="form-group">
+                    <label for="Search">Search</label>
+                    <div class="input-group">
+                        <input type="text">
+                        <button>$</button>
+                    </div>
+                </div>
+            </aside>
+    
+            <main>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta unde accusantium illum eos distinctio tempore, magnam impedit facilis dignissimos, expedita iusto blanditiis quos assumenda corrupti. A, perspiciatis! Dolorem odio iure maxime ipsam blanditiis, corrupti incidunt delectus beatae at, architecto in esse, eaque repudiandae quibusdam. Perspiciatis distinctio quam error! Cupiditate vero eius excepturi. Consequatur, velit ut architecto officia animi saepe dolorum quasi explicabo fugiat dolores eos fugit voluptatem at reprehenderit maiores perferendis sapiente quam est inventore consequuntur. Architecto itaque, unde deserunt obcaecati qui exercitationem assumenda deleniti earum voluptate quidem doloremque alias nisi? Saepe soluta tempore dolorum.</p>
+    
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus iusto, recusandae error explicabo accusamus inventore qui commodi exercitationem aspernatur tempora eos minima consequatur neque adipisci iste placeat perspiciatis nemo dignissimos assumenda eveniet aliquid facilis. Minima facere repellat velit unde nemo sed aliquid eius saepe aperiam odio, corporis dicta optio perferendis?</p>
+    
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, facere. Nam atque aliquam praesentium rem, fugiat alias in! Quasi, doloremque!</p>
+            </main>
+        </div>
+        <section class="modal">
+            <div class="container">
+                <div class="modal-body">
+                    <img id="mobile-exit" class="modal-exit-btn" src="images/exit.svg" alt="Exit Navigation">
+
+                    <form>
+                        <div class="form-group">
+                            <label for="Email">Email</label>
+                            <input type="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password">
+                        </div>
+                    </form>
+                    <button>Log in</button>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <script>
+        const mobileMenu = document.querySelector('.mobile-menu'),
+              mobileExit = document.querySelector('.mobile-exit'),
+              modal = document.querySelector('.log-in-btn'),
+              modalExitBtn = document.querySelector('.modal-exit-btn');
+
+        // nav toggle
+        mobileMenu.addEventListener('click', () => {
+            document.querySelector('nav').style.display = 'block';
+        });
+        mobileExit.addEventListener('click', () => {
+            document.querySelector('nav').style.display = 'none';
+        });
+
+        // Modal
+        modal.addEventListener('click', () => {
+            document.querySelector('.modal').style.display = 'block';
+        });
+        modalExitBtn.addEventListener('click', () => {
+            document.querySelector('.modal').style.display = 'none';
+        });
+
+    </script>
+</body>
+</html>
