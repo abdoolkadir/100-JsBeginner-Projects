@@ -1,13 +1,17 @@
-const hexCodes = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a','b','c', 'd', 'e', 'f'];
+const hexCodes = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f'];
 
 document.querySelector('button').addEventListener('click', changeStyle)
 
-function generateHex(){
+function generateHex() {
     let hex = '#';
     for (let i = 0; i < 6; i++) {
-        hex += hexCodes[Math.floor(Math.random() * hexCodes.length)];
+        // Using math.round() was returning an undefined value becase it was looping outside the array length.
+        // so adding the array lenght and modulus solved it.
+        const index = Math.round(Math.random() * hexCodes.length) % 15;
+        hex += hexCodes[index];
+        console.log(hex, index)
     }
-    return hex
+    return hex;
 }
 
 
